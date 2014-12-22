@@ -19,7 +19,7 @@ class About extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('default/header');
+		$this->load->view('default/header',  ['title' => 'About Me']);
 		$this->load->view('default/about');
 		$this->load->view('default/footer');
 	}

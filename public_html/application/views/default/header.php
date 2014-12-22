@@ -34,3 +34,6 @@
 
 <h1>Open Tor X</h1>
 <p>Welcome to Open Tor X! An Open Source Torrent Website!</p>
+
+<div class="row container">
+<div class="one">

@@ -24,13 +24,25 @@ class Search extends CI_Controller {
 
 		$search = $this->input->get('s');
 
-		$data = array();
+		$data['title'] = 'Results';
+		$data['anchor'] = 'results';
+		
 		if($search)
 		{
 			$data['results'] = $this->torrentmodel->search($search);
 		}
-		$this->load->view('default/header');
-		$this->load->view('default/search', $data);
+		$this->load->view('default/header',  ['title' => $search]);
+		$this->load->view('default/search');
+		
+		if(count($data['results']) > 0)
+		{
+			$this->load->view('default/table', $data);
+		}
+		else
+		{
+			$this->load->view('default/message', ['message' => 'No results found! :-(']);
+		}
+		
 		$this->load->view('default/footer');
 	}
 }

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Torrent extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,16 +17,26 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	 
+ 	function _remap($method){   
+    $this->index($method);
+        
+    }
+    
 	public function index($torrent = NULL)
 	{
 
 		$this->load->model("torrentmodel");
 
 
-		$data['result'] = $this->torrentmodel->get_torrent($torrent);
+		$data = $this->torrentmodel->get_torrent($torrent);
+		
+		if(!$data)
+		{
+			redirect(base_url());
+		}
 
-
-		$this->load->view('default/header');
+		$this->load->view('default/header',  ['title' => $data['name']]);
 		$this->load->view('default/torrent', $data);
 		$this->load->view('default/footer');
 	}

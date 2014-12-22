@@ -33,8 +33,16 @@ class Welcome extends CI_Controller {
 		$data['other'] = $this->torrentmodel->get('other');
 		$data['xxx'] = $this->torrentmodel->get('xxx');
 
-		$this->load->view('default/header');
-		$this->load->view('default/home', $data);
+		$this->load->view('default/header',  ['title' => 'Welcome']);
+		$this->load->view('default/table', ['title' => 'Anime', 'anchor' => 'anime', 'results' => $data['anime']]);
+		$this->load->view('default/table', ['title' => 'Applications', 'anchor' => 'applications', 'results' => $data['applications']]);
+		$this->load->view('default/table', ['title' => 'Books', 'anchor' => 'books', 'results' => $data['books']]);
+		$this->load->view('default/table', ['title' => 'Games', 'anchor' => 'games', 'results' => $data['games']]);
+		$this->load->view('default/table', ['title' => 'Movies', 'anchor' => 'movies', 'results' => $data['movies']]);
+		$this->load->view('default/table', ['title' => 'Music', 'anchor' => 'music', 'results' => $data['music']]);
+		$this->load->view('default/table', ['title' => 'Other', 'anchor' => 'other', 'results' => $data['other']]);
+		$this->load->view('default/table', ['title' => 'XXX', 'anchor' => 'xxx', 'results' => $data['xxx']]);
+		
 		$this->load->view('default/footer');
 	}
 }
