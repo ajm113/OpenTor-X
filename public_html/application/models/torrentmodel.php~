@@ -95,6 +95,10 @@ class Torrentmodel extends CI_Model
 		$cache_name 'torrent_'.$hash;
 		$data = $this->swiss_cache->get($cache_name);
 
+		if($data){
+			return $data;
+		}
+
 	}
 
 	function get_categories()

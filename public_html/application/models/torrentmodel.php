@@ -92,7 +92,7 @@ class Torrentmodel extends CI_Model
 	function get_torrent($hash)
 	{
 		$this->load->library("Swiss_cache");
-		$cache_name 'torrent_'.$hash;
+		$cache_name = 'torrent_'.$hash;
 		$data = $this->swiss_cache->get($cache_name);
 
 		if($data){
