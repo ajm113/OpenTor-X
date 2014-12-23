@@ -31,6 +31,11 @@ class Torrentmodel extends CI_Model
 		{
 			$this->db->where('category', $category);
 		}
+		
+		if($limit > 1000)
+		{
+			$limit = 1000;
+		}
 
 		$this->db->limit($limit, $start);
 
@@ -61,7 +66,7 @@ class Torrentmodel extends CI_Model
 		return $data;
 	}
 
-	function search($search)
+	function search($search, $start = 0)
 	{
 		$parts = explode(":", $search);
 		$category = '';
@@ -86,7 +91,7 @@ class Torrentmodel extends CI_Model
 			$qsearch = $parts[1];
 		}
 
-		return $this->get($category, 25, 0, $qsearch);
+		return $this->get($category, 11, $start, $qsearch);
 	}
 
 	function get_torrent($hash)

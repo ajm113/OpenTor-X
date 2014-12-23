@@ -20,6 +20,7 @@
 		 <link rel="stylesheet" href="/assets/css/normalize.css">
  		 <link rel="stylesheet" href="/assets/css/skeleton.css">
 		<link rel="stylesheet" href="/assets/css/app.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<title><?=$title?> | Open Tor X</title>
 	</head>
 <body>
