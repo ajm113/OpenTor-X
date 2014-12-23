@@ -24,12 +24,12 @@ $(document).ready(function() {
                 $.get('/search/ajax/'+ track_load + '/?s=<?=$_GET['s']?>', function(data){
                 
                 
-                	if(data != "")
-                    {      
+  						if(data.length > 0)
+  						{
 						$("#results").append(data); //append received data into the element
 						track_load += 12; //loaded group increment
 						loading = false;                     
-                    }
+                    	}
                     
 
                 
