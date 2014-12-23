@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Search extends CI_Controller {
+class Share extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,37 +19,32 @@ class Search extends CI_Controller {
 	 */
 	public function index()
 	{
-
 		$this->load->model("torrentmodel");
-
-		$search = $this->input->get('s');
-
-		$data['title'] = 'Results';
-		$data['anchor'] = 'results';
-		
-		if($search)
-		{
-			$data['results'] = $this->torrentmodel->search($search);
-		}
-		$this->load->view('default/header',  ['title' => $search]);
+		$this->load->helper('form');
+		$this->load->view('default/header', ['title' => 'Share Torrents']);
 		$this->load->view('default/search');
 		
-
+		$options = $this->torrentmodel->get_categories();
+		asort($options);
+		
+		$flip = array();
+		foreach($options as $key => $value)
+		{
+			$flip[$value] = $value;
+		}
+		
+		$this->load->view('default/upload_form', ['options' => $flip]);
+		
 		
 		$this->load->view('default/footer');
 	}
 	
-	public function ajax($start = 0)
+	public function upload()
 	{
 		$this->load->model("torrentmodel");
-		$data['anchor'] = $start;
-		$search = $this->input->get('s');
-		$data['results'] = $this->torrentmodel->search($search, $start);
+		$response = $this->torrentmodel->upload_torrent('file');
+		var_dump($response);
 		
-		if(count($data['results']) > 0)
-		{
-			$this->load->view('default/table', $data);
-		}	
 	}
 }
 
