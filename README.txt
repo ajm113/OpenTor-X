@@ -34,7 +34,7 @@ $db['default']['dbdriver'] = 'mydatabasesystem';
 
 Supported:  mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 
-3. Import opentorx_data_dump.txt into your database.
+3. Import opentorx_data_dump.txt into your database. This file includes the table structure.
 
 NOTE: This dump file is using Kickass torrent's partial dump.
 If you plan on using a full dump or wish to use import another you may get them here:
@@ -45,18 +45,20 @@ kickass_import.txt
 
 4. Enjoy the experience!
 
-
+--------
 Troubleshooting:
+--------
+
 I'm getting errors/warnings from swiss_cache.php on some pages!
 Ensure your cache folder has full permissions! Set folder /application/cache to 0777.
 
-I can load the front page fine, but I get apache/web server 404 error messages!
+I can load the front page fine, but I get apache/web server 404 error on other pages!
 If your running this on project on a sub folder. I.E /localhost/opentorx. You will
 need to configure .htaccess for your server! Or simply create a virtual host!
 ... I will let you google how to do this.
 
 How can I import x and y's database dump?
-You will need to consult a online form, or the database system your using to see how you
+You will need to consult a online forum, or the database system your using to see how you
 can do local file imports.
 
 Can I use this for my website?
