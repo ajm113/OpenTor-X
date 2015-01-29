@@ -1,12 +1,16 @@
 <?php
+
 define('ENABLE_GZIP', TRUE); 										//Enable if you are caching large amounts of data.
 define('DEFAULT_CACHE_MODE', 'AUTO');								//Automaticly find the best cache method.
 define('CACHE_PREFIX', 'sc_');										//Appends this prefix to cached data id.
-define('CACHE_DIR', APPPATH.'cache/');					//SET THIS TO WHERE YOUR STORING YOUR CACHE FOLDERS.
-define('IMAGE_CACHE_DIRECTORY', APPPATH.'cache/img/');	//SET THIS TO WHERE YOUR STORING YOUR IMAGE CACHE.
-define('IMAGE_CACHE_URL_LOCATION', '/assets/img/cache');	//SET THIS TO WHERE YOU STORE YOUR CACHED IMAGES FOR WEB ACCESS
+define('CACHE_DIR', dirname(__FILE__).'/cache/');					//SET THIS TO WHERE YOUR STORING YOUR CACHE FOLDERS.
+define('IMAGE_CACHE_DIRECTORY', dirname(__FILE__).'/cache/img/');	//SET THIS TO WHERE YOUR STORING YOUR IMAGE CACHE.
+define('IMAGE_CACHE_URL_LOCATION', 'http://localhost/Swiss%20Cache/cache/img/');	//SET THIS TO WHERE YOU STORE YOUR CACHED IMAGES FOR WEB ACCESS
 define('IMAGE_CACHE_COMP_JPG', 50);
 define('IMAGE_CACHE_COMP_PNG', 8);
+
+
+
 class Swiss_cache
 {
 	private $mode = "";
@@ -83,7 +87,7 @@ class Swiss_cache
 				$life = 604800; //Last 7 days.
 			}
 		
-			apc_add($id, $data, $life);
+			apc_store($id, $data, $life);
 			
 			return TRUE;
 		}
@@ -115,7 +119,7 @@ class Swiss_cache
 		
 		if($mod === 'apc' && $this->apc_enabled)
 		{
-			return apc_delete ($id);
+			return (apc_exists($id)) ? apc_delete($id) : true;
 		}
 		
 		return FALSE;
@@ -139,6 +143,7 @@ class Swiss_cache
 				{
 					apc_clear_cache();
 				}
+
 				$this->delete_all_cache_files();
 			break;
 			case 'apc':
@@ -204,6 +209,7 @@ class Swiss_cache
 		
 		//Check if we already cached this image....
 		
+
 		$fileInfo = pathinfo($path);
 		$mimeType = strtolower($fileInfo['extension']);
 		$basename = $fileInfo['basename'];
@@ -238,6 +244,7 @@ class Swiss_cache
 		
 		return $path;
 	}
+
 	public function remove_image($path)
 	{
 		if(!is_string($path)){
@@ -282,6 +289,7 @@ class Swiss_cache
 				imagealphablending( $dest, false );
 				imagesavealpha( $dest, true );
 			}
+
 			//imagecopy( $dest, $dest, 0, 0, 0, 0, $image_width, $image_width );
 			
 			switch( $ext ) {
