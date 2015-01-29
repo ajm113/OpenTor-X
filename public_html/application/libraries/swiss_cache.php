@@ -3,9 +3,9 @@
 define('ENABLE_GZIP', TRUE); 										//Enable if you are caching large amounts of data.
 define('DEFAULT_CACHE_MODE', 'AUTO');								//Automaticly find the best cache method.
 define('CACHE_PREFIX', 'sc_');										//Appends this prefix to cached data id.
-define('CACHE_DIR', dirname(__FILE__).'/cache/');					//SET THIS TO WHERE YOUR STORING YOUR CACHE FOLDERS.
-define('IMAGE_CACHE_DIRECTORY', dirname(__FILE__).'/cache/img/');	//SET THIS TO WHERE YOUR STORING YOUR IMAGE CACHE.
-define('IMAGE_CACHE_URL_LOCATION', 'http://localhost/Swiss%20Cache/cache/img/');	//SET THIS TO WHERE YOU STORE YOUR CACHED IMAGES FOR WEB ACCESS
+define('CACHE_DIR', APPPATH.'cache/');					//SET THIS TO WHERE YOUR STORING YOUR CACHE FOLDERS.		+define('CACHE_DIR', dirname(__FILE__).'/cache/');					//SET THIS TO WHERE YOUR STORING YOUR CACHE FOLDERS.
+define('IMAGE_CACHE_DIRECTORY', APPPATH.'cache/img/');	//SET THIS TO WHERE YOUR STORING YOUR IMAGE CACHE.		+define('IMAGE_CACHE_DIRECTORY', dirname(__FILE__).'/cache/img/');	//SET THIS TO WHERE YOUR STORING YOUR IMAGE CACHE.
+define('IMAGE_CACHE_URL_LOCATION', '/assets/img/cache');	//SET THIS TO WHERE YOU STORE YOUR CACHED IMAGES FOR WEB ACCESS
 define('IMAGE_CACHE_COMP_JPG', 50);
 define('IMAGE_CACHE_COMP_PNG', 8);
 
