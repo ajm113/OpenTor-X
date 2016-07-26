@@ -1,2 +1,2 @@
 <h2>Oops!</h2>
-	<h3><?=$message?></h3>
+	<h3><?php echo $message; ?></h3>

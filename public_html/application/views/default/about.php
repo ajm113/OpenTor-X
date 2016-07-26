@@ -1,2 +1,8 @@
-<p>Open Tor X is a open source content index project. Commited to making anyone have the power to start their own torrenting index website! Open Tor X was started by Andrew McRobb and is protected under the MIT Licesnse of 2014.</p>
-
+<p>
+	Open Tor X is a open source torrent indexing site. In no way shape or form, does this project store media 
+	(except for site assets. i.e CSS, HTML, JavaScript)
+</p>
+<p>
+	Open Tor X is a MIT licensed software, and can be used in any shape or form from it's users, 
+	and can be downloaded here: <a href="https://github.com/ajm113/OpentorX">GitHub Page</a>
+</p>

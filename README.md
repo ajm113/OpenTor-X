@@ -3,6 +3,8 @@
 OpenTorX is a open source content index website, freely available for anyone to 
 use for personal or comercial use under the MIT license.
 
+(https://raw.githubusercontent.com/ajm113/Open-Tor-X/development/preview.png)
+
 I'll be setting up a demo sometime soon.
 
 
@@ -41,6 +43,9 @@ NOTE: This dump file is using KAT partial dump. (When it was online at the time.
 
 # Troubleshooting:
 
+*How come the torrent download links are broken?*
+
+The site hosting the torrents has went down. For now the already available dump will be a placeholder until you get some real data.
 
 *I'm getting errors/warnings from swiss_cache.php on some pages!*
 
@@ -75,4 +80,4 @@ swiss_cache is still in alpha and I will be working on a fix soon! (Swiss Cache 
 
 *How come share isn't working?*
 
-This feature is work in progress and hope to have this working in the next version.
+This feature is going to be depricated!
