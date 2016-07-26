@@ -30,7 +30,8 @@
 	<div class="row">
 		<div class="twelve">
 			<h1>OpenTor X</h1>
-			<p>Welcome to OpenTor X! An Open Source Torrent Website!</p>
+			<i>Ver: 2.0</i>
+			<p>Welcome to OpenTor X! An Open Source Torrent Indexing Website!</p>
 		</div>
 	</div>
 </div>

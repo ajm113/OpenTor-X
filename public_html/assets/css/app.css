@@ -43,3 +43,7 @@ nav ul li a {
     color: #616161;
     padding: 10px 0;
 }
+
+footer p {
+    text-align: center;
+}

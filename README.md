@@ -3,7 +3,7 @@
 OpenTorX is a open source content index website, freely available for anyone to 
 use for personal or comercial use under the MIT license.
 
-![preview](https://raw.githubusercontent.com/ajm113/Open-Tor-X/development/preview.png)
+![preview](https://raw.githubusercontent.com/ajm113/Open-Tor-X/master/preview.png)
 
 I'll be setting up a demo sometime soon.
 
@@ -19,8 +19,8 @@ PHP 4.5 =>
 These steps assume you know proper server configurations and or know how to setup a virtual server
 in apache or other web servers for local machine access.
 
-1. Clone / Extract source code to a web server directory.
-2. Configure mysql settings in database.php located in. "/application/config/" and create a new database or use a already made one.
+- Clone / Extract source code to a web server directory.
+- Configure mysql settings in database.php located in. "/application/config/" and create a new database or use a already made one.
 
 Change these lines to access the database.
 
@@ -35,21 +35,17 @@ $db['default']['dbdriver'] = 'mydatabasesystem';
 
 Supported:  mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 
-3. Import opentorx_data_dump.sql into your database. This file includes the table structure.
+- Import opentorx_data_dump.sql into your database. This file includes the table structure.
 
 NOTE: This dump file is using KAT partial dump. (When it was online at the time.)
 
-4. Enjoy the experience!
+- Enjoy the experience!
 
 # Troubleshooting:
 
 *How come the torrent download links are broken?*
 
 The site hosting the torrents has went down. For now the already available dump will be a placeholder until you get some real data.
-
-*I'm getting errors/warnings from swiss_cache.php on some pages!*
-
-Ensure your cache folder has full permissions! Set folder /application/cache to 0777.
 
 *I can load the front page fine, but I get apache/web server 404 error on other pages!*
 
@@ -68,16 +64,8 @@ YES! Be sure to send me a link!
 
 *I still need help! :(*
 
-You can ask questions on the github page or contact me!
+You can ask questions on the github issue page or contact me!
 
-*Whats your email?*
+*How come share isn't available?*
 
-andrewmcrobb at gmail d.o.t com
-
-*APC cache isn't working!*
-
-swiss_cache is still in alpha and I will be working on a fix soon! (Swiss Cache may get removed even)
-
-*How come share isn't working?*
-
-This feature is going to be depricated!
+This feature is going to be depricated and removed! (Also the site torcache site is gone.)
