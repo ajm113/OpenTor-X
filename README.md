@@ -1,11 +1,18 @@
 # Intro
 
 OpenTorX is a open source content index website, freely available for anyone to 
-use for personal or comercial use under the MIT license.
+use for personal or commercial use under the MIT license.
 
 ![preview](https://raw.githubusercontent.com/ajm113/Open-Tor-X/master/preview.png)
 
 I'll be setting up a demo sometime soon.
+
+# Features
+
+- Ability to use different types of database engines. i.e mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
+- Search categories and keywords! i.e "Anime:twintails"
+- Loads fast using jQuery, and Skeleton.css and query caching!
+- Easy personalization to your liking!
 
 # Requirements
 
@@ -26,15 +33,15 @@ Change these lines to access the database.
 ```php
 $db['default']['username'] = 'yourusername';
 $db['default']['password'] = 'yourpassword';
-$db['default']['database'] = 'opentorx';  //What database you would like to use.
+$db['default']['database'] = 'opentorx';
 ```
 
 If you plan on using another database type. Please change this line:
-$db['default']['dbdriver'] = 'mydatabasesystem';
+```$db['default']['dbdriver'] = 'mydatabasesystem';```
 
-Supported:  mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
+**Supported:**  mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 
-- Import opentorx_data_dump.sql into your database. This file includes the table structure.
+- Import opentorx_data_dump.sql into your database or someone else's. This file includes the table structure. **(WARNING) This is a PLACEHOLDER, hash links no longer work! MAKE SURE YOU TRUNCATE THE TABLES!**
 
 NOTE: This dump file is using KAT partial dump. (When it was online at the time.)
 
@@ -63,11 +70,11 @@ YES! Be sure to send me a link!
 
 **I still need help! :(**
 
-You can ask questions on the github issue page or contact me!
+You can ask questions on the GitHub issue page or contact me!
 
-**How come share isn't available?**
+**How come "Share" isn't available anymore?**
 
-This feature is going to be depricated and removed! (Also the site torcache site is gone.)
+This feature is removed because TorCache is no longer available. Plus this project is more for in-home torrent indexing.
 
 **Why Isn't NodeJS/Grunt/Gulp Being Used For Front-End?**
 
