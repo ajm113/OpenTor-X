@@ -12,7 +12,7 @@ $(document).ready(function() {
     var track_load = 0; //total loaded record group(s)
     var loading  = false; //to prevents multipal ajax loads
     
-    $('#results').load("/search/ajax/0/?s=<?php $search; ?>", function() {track_load += 12;}); //load first group
+    $('#results').load("/search/ajax/0/?s=<?php echo $search; ?>", function() {track_load += 12;}); //load first group
     
     $(window).scroll(function() { //detect page scroll
         

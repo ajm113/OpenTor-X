@@ -18,7 +18,6 @@
 <nav>
 	<ul>
 		<li><a href="/">Home</a></li>
-		<li><a href="/share">Share</a></li>
 		<li><a href="/about">About</a></li>
 		<li>
 			<form action="/search" class="menu-form"><input type="search" name="s" value="<?php echo $search; ?>" placeholder="Search">

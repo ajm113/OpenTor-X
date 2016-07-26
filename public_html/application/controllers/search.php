@@ -23,6 +23,7 @@ class Search extends CI_Controller {
 		$this->load->model("torrentmodel");
 
 		$search = $this->input->get('s');
+		$category = $this->input->get('category');
 
 		$data['title'] = 'Results';
 		$data['anchor'] = 'results';
