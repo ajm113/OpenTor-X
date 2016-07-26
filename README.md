@@ -11,7 +11,7 @@ I'll be setting up a demo sometime soon.
 
 - Ability to use different types of database engines. i.e mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 - Search categories and keywords! i.e "Anime:twintails"
-- Loads fast using jQuery, and Skeleton.css and query caching!
+- Loads fast using jQuery, Skeleton.css and active records caching!
 - Easy personalization to your liking!
 
 # Requirements
