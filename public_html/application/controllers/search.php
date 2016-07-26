@@ -31,6 +31,7 @@ class Search extends CI_Controller {
 		{
 			$data['results'] = $this->torrentmodel->search($search);
 		}
+		
 		$this->load->view('default/header',  ['title' => $search]);
 		$this->load->view('default/search');
 		

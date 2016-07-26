@@ -1,7 +1,10 @@
-<?if(isset($_GET['s']))
-{
-	echo '<p>Your results for <strong>'.$_GET['s'].'</strong>...</p>';
-}?>
+<?php 
+    $search = (isset($_GET['s'])) ? trim(htmlentities($_GET['s'])) : NULL;
+?>
+
+<?php if($search): ?>
+	<p>Your results for <strong>'<?php echo $search; ?>'</strong>...</p>';
+<?php endif; ?>
 
 <script>
 
@@ -9,7 +12,7 @@ $(document).ready(function() {
     var track_load = 0; //total loaded record group(s)
     var loading  = false; //to prevents multipal ajax loads
     
-    $('#results').load("/search/ajax/0/?s=<?=$_GET['s']?>", function() {track_load += 12;}); //load first group
+    $('#results').load("/search/ajax/0/?s=<?php echo $search; ?>", function() {track_load += 12;}); //load first group
     
     $(window).scroll(function() { //detect page scroll
         
@@ -21,23 +24,17 @@ $(document).ready(function() {
                 loading = true; //prevent further ajax loading
                 
                 //load data from the server using a HTTP POST request
-                $.get('/search/ajax/'+ track_load + '/?s=<?=$_GET['s']?>', function(data){
-                
-                
+                $.get('/search/ajax/'+ track_load + '/?s=<?php echo $search; ?>', function(data) {
   						if(data.length > 0)
   						{
-						$("#results").append(data); //append received data into the element
-						track_load += 12; //loaded group increment
-						loading = false;                     
+    						$("#results").append(data); //append received data into the element
+    						track_load += 12; //loaded group increment
+    						loading = false;                     
                     	}
-                    
-
                 
                 }).fail(function(xhr, ajaxOptions, thrownError) { //any errors?
-                    
                     alert(thrownError); //alert with HTTP error
                     loading = false;
-                
                 });
                 
             }
