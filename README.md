@@ -3,7 +3,7 @@
 OpenTorX is a open source content index website, freely available for anyone to 
 use for personal or comercial use under the MIT license.
 
-(https://raw.githubusercontent.com/ajm113/Open-Tor-X/development/preview.png)
+![preview](https://raw.githubusercontent.com/ajm113/Open-Tor-X/development/preview.png)
 
 I'll be setting up a demo sometime soon.
 
