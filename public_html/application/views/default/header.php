@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="/assets/css/skeleton.css">
 		<link rel="stylesheet" href="/assets/css/app.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<title><?php echo $title; ?> | Open Tor X</title>
+		<title><?php echo $title; ?> | OpenTor X</title>
 	</head>
 <body>
 <nav>
@@ -30,8 +30,8 @@
 <div class="u-full-width">
 	<div class="row">
 		<div class="twelve">
-			<h1>Open Tor X</h1>
-			<p>Welcome to Open Tor X! An Open Source Torrent Website!</p>
+			<h1>OpenTor X</h1>
+			<p>Welcome to OpenTor X! An Open Source Torrent Website!</p>
 		</div>
 	</div>
 </div>
