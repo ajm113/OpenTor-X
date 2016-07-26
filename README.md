@@ -43,28 +43,36 @@ NOTE: This dump file is using KAT partial dump. (When it was online at the time.
 
 
 *I'm getting errors/warnings from swiss_cache.php on some pages!*
+
 Ensure your cache folder has full permissions! Set folder /application/cache to 0777.
 
 *I can load the front page fine, but I get apache/web server 404 error on other pages!*
+
 If your running this on project on a sub folder. I.E /localhost/opentorx. You will
 need to configure .htaccess for your server! Or simply create a virtual host!
 ... I will let you google how to do this.
 
 *How can I import x and y's database dump?*
+
 You will need to consult a online forum, or the database system your using to see how you
 can do local file imports of the data dump.
 
 *Can I use this for my website?*
+
 YES! Be sure to send me a link!
 
 *I still need help! :(*
+
 You can ask questions on the github page or contact me!
 
 *Whats your email?*
+
 andrewmcrobb at gmail d.o.t com
 
 *APC cache isn't working!*
+
 swiss_cache is still in alpha and I will be working on a fix soon! (Swiss Cache may get removed even)
 
 *How come share isn't working?*
+
 This feature is work in progress and hope to have this working in the next version.
