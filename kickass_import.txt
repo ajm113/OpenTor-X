@@ -1,3 +1,0 @@
-LOAD DATA LOCAL INFILE '/Applications/AMPPS/www/opentorx.com/hourlydump.txt' INTO TABLE torrents
-FIELDS TERMINATED BY '|' LINES TERMINATED BY '\n'
-(@col1,@col2,@col3,@4,@col5) set hash=@col1,name=@col2,category=@col3,download=@col5;
