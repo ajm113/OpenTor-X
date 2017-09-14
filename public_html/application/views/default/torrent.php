@@ -3,7 +3,7 @@
 <div class="row">
 
 	<div class="one-half columns">
-	<b>Posted</b> <?php echo$posted; ?>
+	<b>Posted</b> <?php echo $posted; ?>
 	</div>
 	<div class="one-half columns">
 	<b>Info Hash</b> <?php echo $hash; ?>
